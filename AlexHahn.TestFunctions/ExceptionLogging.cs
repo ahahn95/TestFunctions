@@ -23,7 +23,7 @@ namespace AlexHahn.TestFunctions
         }
 
         [FunctionName("ExceptionLogging")]
-        public void Run(
+        public string Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)]
             HttpRequest req, ILogger log)
         {
@@ -33,13 +33,17 @@ namespace AlexHahn.TestFunctions
             {
                 if (true)
                 {
-                    throw new ArgumentException();
+                    throw new ArgumentNullException();
                 }
             }
             catch (Exception e)
             {
-                _telemetryClient.TrackException(e);
+                log.LogError("Argument Exception Thrown");
+                //_telemetryClient.TrackException(e);
             }
+
+            const string retStr = "Function Ran"; 
+            return retStr;
         }
     }
 }
