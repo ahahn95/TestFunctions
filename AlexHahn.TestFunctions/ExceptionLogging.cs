@@ -1,5 +1,5 @@
 ﻿using System;
-using Domain.Exceptions;
+using Domain.Exceptions.Critical;
 using Microsoft.ApplicationInsights;
 using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.Azure.WebJobs;
@@ -27,7 +27,7 @@ namespace AlexHahn.TestFunctions
 
             try
             {
-                    throw new TestException();
+                throw new CriticalException();
             }
             catch (Exception e)
             {
@@ -35,7 +35,7 @@ namespace AlexHahn.TestFunctions
                 _telemetryClient.TrackException(e);
             }
 
-            const string retStr = "Function Ran"; 
+            const string retStr = "Function Ran";
             return retStr;
         }
     }
