@@ -1,15 +1,11 @@
 ﻿using System;
-using System.IO;
-using System.Threading.Tasks;
+using Domain.Exceptions;
 using Microsoft.ApplicationInsights;
 using Microsoft.ApplicationInsights.Extensibility;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 
 namespace AlexHahn.TestFunctions
 {
@@ -31,15 +27,12 @@ namespace AlexHahn.TestFunctions
 
             try
             {
-                if (true)
-                {
-                    throw new ArgumentNullException();
-                }
+                    throw new TestException();
             }
             catch (Exception e)
             {
                 log.LogError("Argument Exception Thrown");
-                //_telemetryClient.TrackException(e);
+                _telemetryClient.TrackException(e);
             }
 
             const string retStr = "Function Ran"; 

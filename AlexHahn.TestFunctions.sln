@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlexHahn.TestFunctions", "AlexHahn.TestFunctions\AlexHahn.TestFunctions.csproj", "{A722EAB8-B89F-4B50-A0A9-AD5E216B9CA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlexHahn.Domain", "AlexHahn.Domain\AlexHahn.Domain.csproj", "{AAE8FCEA-1BBF-4675-B45F-2EAE4487087A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{A722EAB8-B89F-4B50-A0A9-AD5E216B9CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A722EAB8-B89F-4B50-A0A9-AD5E216B9CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A722EAB8-B89F-4B50-A0A9-AD5E216B9CA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAE8FCEA-1BBF-4675-B45F-2EAE4487087A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAE8FCEA-1BBF-4675-B45F-2EAE4487087A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAE8FCEA-1BBF-4675-B45F-2EAE4487087A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAE8FCEA-1BBF-4675-B45F-2EAE4487087A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
