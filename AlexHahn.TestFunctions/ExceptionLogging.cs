@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Domain.Exceptions.Critical;
 using Microsoft.ApplicationInsights;
 using Microsoft.ApplicationInsights.Extensibility;
@@ -32,7 +33,7 @@ namespace AlexHahn.TestFunctions
             catch (Exception e)
             {
                 log.LogError("Argument Exception Thrown");
-                _telemetryClient.TrackException(e);
+                _telemetryClient.TrackException(e, new Dictionary<string, string> {{"name", "customException"}});
             }
 
             const string retStr = "Function Ran";
